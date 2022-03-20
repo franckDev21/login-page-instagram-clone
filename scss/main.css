@@ -221,6 +221,19 @@ section .switch-page > a {
   color: #0162ff;
   margin-top: 0.8rem;
 }
+.card__forgot--mobile {
+  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+}
+.card__forgot--mobile a {
+  margin: 0 !important;
+}
+@media (min-width: 925px) {
+  .card__forgot--mobile {
+    display: none;
+  }
+}
 
 @media (max-width: 925px) {
   .hidden-for-mobile {

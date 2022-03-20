@@ -238,6 +238,18 @@ section{
         margin-top: .8rem;
       }
     }
+
+    &--mobile{
+      text-align: right;
+      display: flex;
+      justify-content: flex-end;
+      a{
+        margin: 0 !important;
+      }
+      @media (min-width: 925px) {
+        display: none;
+      }
+    }
   }
 }
 
