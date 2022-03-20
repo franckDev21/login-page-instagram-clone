@@ -1,0 +1,237 @@
+*, ::after, ::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, main {
+  min-height: 100vh;
+  font-family: Helvetica, sans-serif;
+  background-color: #FAFAFA;
+}
+
+a, a:hover, a:active {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+li, ul {
+  list-style: none;
+}
+
+button, input {
+  border: none;
+  outline: none;
+  color: inherit;
+  cursor: pointer;
+  display: inline-block;
+}
+
+main {
+  margin-top: 1rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+section.left {
+  width: calc(100% - 530px);
+  position: relative;
+  min-height: 800px;
+}
+section.left > img {
+  position: absolute;
+  object-fit: cover;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+}
+section.right {
+  max-width: 430px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  flex: none;
+  margin-top: 3rem;
+}
+section .switch-page {
+  text-align: center;
+  margin-top: 1rem;
+}
+section .switch-page > a {
+  color: #0162ff;
+}
+@media (min-width: 925px) {
+  section .switch-page {
+    border: 1.1px solid #eee;
+    padding: 1.1rem;
+    border-radius: 0.3rem;
+    background-color: #fff;
+  }
+}
+
+.container {
+  width: calc(100% - 20px);
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1000px;
+}
+
+.download__label {
+  text-align: center;
+  margin: 1rem 0;
+}
+.download__btns {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.download-btn {
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.36rem;
+  min-width: 160px;
+  border-radius: 0.3rem;
+}
+.download-btn__right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.download-btn__subtitle {
+  opacity: 0.9;
+  font-size: 0.7rem;
+}
+.download-btn__title {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+.download-btn__icon {
+  margin-right: 3px;
+}
+
+.card {
+  border: 1.1px solid #eee;
+  padding: 2rem 1.5rem;
+  border-radius: 0.3rem;
+  background-color: #fff;
+}
+.card__title {
+  font-size: 2.3rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #1d1d1d;
+  font-family: Lucida Calligraphy, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
+}
+.card__btn {
+  padding: 0.6rem 2rem;
+  width: 100%;
+  border-radius: 0.3rem;
+  font-weight: bold;
+  background-color: #0162ff;
+  color: #fff;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card__btn--login {
+  padding: 0.6rem 2rem;
+}
+.card__btn--login.disabled {
+  opacity: 0.3;
+  pointer-events: none;
+  cursor: none;
+}
+@media (min-width: 925px) {
+  .card__btn--login {
+    padding: 0.8rem 2rem;
+  }
+}
+.card__separator {
+  margin: 1rem 0;
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card__separator > span {
+  color: #888;
+}
+.card__separator::after, .card__separator::before {
+  content: "";
+  display: inline-block;
+  height: 1.1px;
+  width: calc(50% - 20px);
+  background-color: #aaa;
+}
+.card__field {
+  padding: 0.8rem 0.4rem;
+  margin-bottom: 0.4rem;
+  border: 1.1px solid #aaa;
+  width: 100%;
+  border-radius: 0.2rem;
+}
+.card__field:focus {
+  border-color: #0162ff;
+}
+.card__forgot {
+  text-align: right;
+  margin: 1rem 0;
+}
+.card__forgot--desktop {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 0;
+}
+.card__forgot > a:hover {
+  text-decoration: underline;
+}
+.card__forgot > a:first-child {
+  display: flex;
+  align-items: center;
+  color: #3F51B5;
+  font-weight: bold;
+}
+.card__forgot > a:first-child:hover {
+  text-decoration: none;
+}
+.card__forgot > a:first-child svg {
+  margin-right: 3px;
+  transform: translateY(-1px);
+}
+.card__forgot > a:last-child {
+  color: #0162ff;
+  margin-top: 0.8rem;
+}
+
+@media (max-width: 925px) {
+  .hidden-for-mobile {
+    display: none;
+  }
+}
+
+@media (min-width: 925px) {
+  .hidden-for-desktop {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

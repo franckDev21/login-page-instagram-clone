@@ -1,0 +1,256 @@
+@import "var";
+
+// global
+*,::after,::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,body,main{
+  min-height: 100vh;
+  font-family: Helvetica, sans-serif;
+  background-color: $bg;
+}
+
+a,a:hover,a:active{
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+li,ul{
+  list-style: none;
+}
+
+button,input{
+  border: none;
+  outline: none;
+  color: inherit;
+  cursor: pointer;
+  display: inline-block;
+}
+
+// layouts
+main{
+  margin-top: 1rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+section{
+  &.left{
+    width: calc(100% - 530px);
+    position: relative;
+    min-height: 800px;
+
+    & > img{
+      position: absolute;
+      object-fit: cover;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      height: auto;
+    }
+
+  }
+
+  &.right{
+    max-width: 430px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    flex: none;
+    margin-top: 3rem;
+  }
+
+  .switch-page{
+    text-align: center;
+    margin-top: 1rem;
+    & > a{
+      color: $primary;
+    }
+    @media (min-width: 925px) {
+      border: 1.1px solid #eee;
+      padding: 1.1rem;
+      border-radius: .3rem;
+      background-color: #fff;
+    }
+  }
+
+}
+
+// container
+
+.container{
+  width: calc(100% - 20px);
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1000px;
+}
+
+// components
+
+.download{
+  &__label{
+    text-align: center;
+    margin: 1rem 0;
+  }
+  &__btns{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+.download-btn{
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: .36rem;
+  min-width: 160px;
+  border-radius: .3rem;
+  &__right{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  &__subtitle{
+    opacity: .9;
+    font-size: .7rem;
+  }
+  &__title{
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+  &__icon{
+    margin-right: 3px;
+  }
+}
+
+.card{
+  border: 1.1px solid #eee;
+  padding: 2rem 1.5rem;
+  border-radius: .3rem;
+  background-color: #fff;
+
+  &__title{
+    font-size: 2.3rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: $black;
+    font-family: Lucida Calligraphy , sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: .8;
+  }
+
+  &__btn{
+    padding: .6rem 2rem;
+    width: 100%;
+    border-radius: .3rem;
+    font-weight: bold;
+    background-color: $primary;
+    color: #fff;
+    font-size: .9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &--login{
+      padding: .6rem 2rem;
+      &.disabled{
+        opacity: .3;
+        pointer-events: none;
+        cursor: none;
+      }
+      @media (min-width: 925px) {
+        padding: .8rem 2rem;
+      }
+    }
+  }
+
+  &__separator{
+    margin: 1rem 0;
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    & > span{color: #888}
+    &::after,&::before{
+      content: "";
+      display: inline-block;
+      height: 1.1px;
+      width: calc(50% - 20px);
+      background-color: #aaa;
+    }
+  }
+
+  &__field{
+    padding: .8rem .4rem;
+    margin-bottom: .4rem;
+    border: 1.1px solid #aaa;
+    width: 100%;
+    border-radius: .2rem;
+    &:focus{
+      border-color:  $primary;
+    }
+  }
+
+  &__forgot{
+    text-align: right;
+    margin: 1rem 0;
+    &--desktop{
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 2rem;
+      margin-bottom: 0;
+    }
+    & > a{
+      &:hover{
+        text-decoration: underline;
+      }
+      &:first-child{
+        display: flex;
+        align-items: center;
+        color: $facebook;
+        font-weight: bold;
+        &:hover{
+          text-decoration: none;
+        }
+        svg{
+          margin-right: 3px;
+          transform: translateY(-1px);
+        }
+      }
+      &:last-child{
+        color: $primary;
+        margin-top: .8rem;
+      }
+    }
+  }
+}
+
+// media query
+
+.hidden-for-mobile{
+  @media (max-width: 925px) {
+    display: none;
+  }
+}
+
+.hidden-for-desktop{
+  @media (min-width: 925px) {
+    display: none;
+  }
+}
